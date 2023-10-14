@@ -8,11 +8,14 @@ import type { Event } from "nostr-tools";
 import Article from "./components/Article";
 import { getTagValues } from "./lib/utils";
 import RelayMenu from "./components/menus/RelayMenu";
+import { Profile } from "./types";
+import { useProfileStore } from "./stores/profileStore";
 
 export default function Home() {
   const { articleEvents, getArticleEvents, setArticleEvents } =
     useArticleEventStore();
   const { subscribe, relayUrl } = useRelayStore();
+  const { setProfile } = useProfileStore();
 
   const [mounted, setMounted] = useState(false);
 
@@ -53,6 +56,32 @@ export default function Home() {
       } else {
         setArticleEvents(relayUrl, events);
       }
+
+      const userFilter = {
+        kinds: [0],
+        authors: Array.from(pubkeys),
+      };
+
+      const onEvent = (event: Event) => {
+        const profileContent = JSON.parse(event.content);
+
+        const profile: Profile = {
+          relay: relayUrl,
+          publicKey: event.pubkey,
+          about: profileContent.about,
+          lud06: profileContent.lud06,
+          name: profileContent.name,
+          nip05: profileContent.nip05,
+          picture: profileContent.picture,
+          website: profileContent.website,
+        };
+
+        setProfile(profile);
+      };
+
+      const onEOSE = () => {};
+
+      subscribe([relayUrl], userFilter, onEvent, onEOSE);
     };
 
     subscribe([relayUrl], articleFilter, onEvent, onEOSE);
