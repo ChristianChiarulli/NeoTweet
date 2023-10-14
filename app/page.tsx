@@ -110,7 +110,7 @@ export default function Home() {
       {/* Sidebar */}
       <div className="hidden lg:block">
         <div className="sticky top-10 space-y-10 lg:pl-16 xl:pl-24 lg:grid-area: sidebar">
-          <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+          <div className="rounded-2xl border border-zinc-200/80 p-6 dark:border-zinc-700/40">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
               <span className="ml-3 select-none">Recommended</span>
             </h2>
@@ -135,7 +135,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+          <div className="rounded-2xl border border-zinc-200/80 p-6 dark:border-zinc-700/40">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
               <span className="ml-3 select-none">Tags</span>
             </h2>

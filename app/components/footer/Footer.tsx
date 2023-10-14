@@ -14,19 +14,19 @@ export default function Footer() {
                       className="transition hover:text-teal-500 dark:hover:text-teal-400"
                       href="/about"
                     >
-                      Articles
+                      nos2x
                     </Link>
                     <Link
                       className="transition hover:text-teal-500 dark:hover:text-teal-400"
                       href="/projects"
                     >
-                      Notes
+                      nostr.nvim
                     </Link>
                     <Link
                       className="transition hover:text-teal-500 dark:hover:text-teal-400"
                       href="/speaking"
                     >
-                      Snippets
+                      alby
                     </Link>
                   </div>
                   <p className="text-sm text-zinc-400 dark:text-zinc-500">

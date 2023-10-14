@@ -4,6 +4,10 @@ import ThemeToggle from "./ThemeToggle";
 import { cookies } from "next/headers";
 import { Theme } from "@/app/types";
 import Login from "./Login";
+import {
+  MagnifyingGlassIcon,
+  PencilSquareIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Header() {
   const theme =
@@ -69,11 +73,14 @@ export default function Header() {
                 </ul>
               </nav>
             </div>
-            <div className="flex justify-end md:flex-1 items-center gap-x-6">
+            <div className="flex justify-end md:flex-1 items-center gap-x-4">
               {/* <button className="relative px-3 py-2 flex gap-x-2 items-center text-sm font-medium text-teal-50 rounded-full bg-teal-500/90 hover:bg-teal-500 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10"> */}
               {/*   <PencilSquareIcon className="flex items-center h-4 w-4 ml-1 -mr-1 text-teal-50" /> */}
               {/*   <span>write</span> */}
               {/* </button> */}
+              <div className="cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800 p-2 rounded-full shadow-zinc-800">
+                <MagnifyingGlassIcon className="h-6 w-6 stroke-zinc-600 dark:stroke-zinc-500" />
+              </div>
               <ThemeToggle theme={theme} />
               <Login>
                 <div className="flex flex-1 justify-end">
