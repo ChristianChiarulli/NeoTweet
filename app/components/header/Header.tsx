@@ -79,7 +79,7 @@ export default function Header() {
                 <div className="flex flex-1 justify-end">
                   <a
                     href="#"
-                    className="dark:text-smoke-100 text-sm font-semibold leading-6 text-gray-200"
+                    className="dark:text-smoke-100 text-sm font-semibold leading-6 text-gray-800 dark:text-gray-200"
                   >
                     Log in <span aria-hidden="true">&rarr;</span>
                     {/* <UserCircleIcon className="h-7 w-7 text-smoke-400" aria-hidden="true" /> */}

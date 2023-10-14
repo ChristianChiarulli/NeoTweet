@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import type { Event } from "nostr-tools";
 import Article from "./components/Article";
 import { getTagValues } from "./lib/utils";
+import RelayMenu from "./components/menus/RelayMenu";
 
 export default function Home() {
   const { articleEvents, getArticleEvents, setArticleEvents } =
@@ -74,6 +75,8 @@ export default function Home() {
             <Article key={event.id} event={event} />
           ))}
       </div>
+
+      <RelayMenu />
       {/* Sidebar */}
       <div className="">
         <div className="sticky top-10 space-y-10 lg:pl-16 xl:pl-24 lg:grid-area: sidebar">
