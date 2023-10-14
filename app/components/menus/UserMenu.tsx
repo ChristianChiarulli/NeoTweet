@@ -7,7 +7,6 @@ import { useUserProfileStore } from "@/app/stores/userProfileStore";
 import { Profile } from "@/app/types";
 import { Popover, Transition } from "@headlessui/react";
 
-
 const links = [
   { name: "Profile", href: "#" },
   { name: "Settings", href: "#" },
@@ -18,10 +17,12 @@ const links = [
 
 export default function Example({ children }: any) {
   const { activeRelay, relayUrl } = useRelayStore();
-  const { getUserProfile, clearUserProfile, setUserPublicKey } = useUserProfileStore();
+  const { getUserProfile, setUserProfile, userProfile, clearUserProfile, setUserPublicKey } =
+    useUserProfileStore();
   const [currentProfile, setCurrentProfile] = useState<Profile>();
   const { getRelayInfo } = useRelayInfoStore();
   const { setRelayMenuActiveTab, setRelayMenuIsOpen } = useRelayMenuStore();
+
   useEffect(() => {
     if (currentProfile && currentProfile.relay === relayUrl) {
       return;
@@ -32,7 +33,7 @@ export default function Example({ children }: any) {
       setCurrentProfile(cachedProfile);
       return;
     }
-  }, [relayUrl, activeRelay]);
+  }, [relayUrl, activeRelay, userProfile]);
 
   const handleRelayMenuSettingsClick = () => {
     setRelayMenuActiveTab("Settings");
@@ -71,20 +72,34 @@ export default function Example({ children }: any) {
               onClick={handleRelayMenuReadFromClick}
               className="mb-2 block cursor-pointer border-b border-zinc-200  px-4 pb-2 pt-1 dark:border-zinc-700/40"
             >
-              {currentProfile && currentProfile.name && <p>{currentProfile.name}</p>}
+              {currentProfile && currentProfile.name && (
+                <p>{currentProfile.name}</p>
+              )}
               {currentProfile && currentProfile.name && (
                 <p className="mb-1 mt-2 flex items-center gap-x-2">
                   <img
                     className="h-5 w-5 rounded-full"
-                    src={relayUrl.replace("wss://", "https://").replace("relay.", "") + "/favicon.ico"}
+                    src={
+                      relayUrl
+                        .replace("wss://", "https://")
+                        .replace("relay.", "") + "/favicon.ico"
+                    }
                     alt=""
                   />
-                  {getRelayInfo(relayUrl) && <span className="text-zinc-500 dark:text-zinc-200">{getRelayInfo(relayUrl).name}</span>}
+                  {getRelayInfo(relayUrl) && (
+                    <span className="text-zinc-500 dark:text-zinc-200">
+                      {getRelayInfo(relayUrl).name}
+                    </span>
+                  )}
                 </p>
               )}
             </span>
             {links.map((item) => (
-              <a key={item.name} href={item.href} className="block px-4 py-1 hover:bg-teal-400/40 dark:hover:bg-teal-500/50">
+              <a
+                key={item.name}
+                href={item.href}
+                className="block px-4 py-1 hover:bg-teal-400/40 dark:hover:bg-teal-500/50"
+              >
                 {item.name}
               </a>
             ))}
@@ -102,7 +117,10 @@ export default function Example({ children }: any) {
             {/*   Settings */}
             {/* </span> */}
             <div className="mt-2 border-t border-zinc-200 dark:border-zinc-700/40" />
-            <span onClick={signOut} className="mt-2 block cursor-pointer px-4 py-1 hover:bg-teal-400/40 dark:hover:bg-teal-500/50">
+            <span
+              onClick={signOut}
+              className="mt-2 block cursor-pointer px-4 py-1 hover:bg-teal-400/40 dark:hover:bg-teal-500/50"
+            >
               <p>{"Sign out"}</p>
             </span>
           </div>
