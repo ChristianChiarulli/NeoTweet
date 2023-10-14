@@ -6,7 +6,6 @@ import { Theme } from "@/app/types";
 import Login from "./Login";
 import {
   MagnifyingGlassIcon,
-  PencilSquareIcon,
 } from "@heroicons/react/24/outline";
 
 export default function Header() {
@@ -54,22 +53,6 @@ export default function Header() {
                       Snippets
                     </Link>
                   </li>
-                  {/* <li> */}
-                  {/*   <Link */}
-                  {/*     className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" */}
-                  {/*     href="/profile" */}
-                  {/*   > */}
-                  {/*     Profile */}
-                  {/*   </Link> */}
-                  {/* </li> */}
-                  {/* <li> */}
-                  {/*   <Link */}
-                  {/*     className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" */}
-                  {/*     href="/uses" */}
-                  {/*   > */}
-                  {/*     Settings */}
-                  {/*   </Link> */}
-                  {/* </li> */}
                 </ul>
               </nav>
             </div>
