@@ -67,7 +67,7 @@ export default function Example({ children }: any) {
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel className="absolute right-0 z-10 mt-2 flex w-screen max-w-min translate-x-4 px-4">
-          <div className="w-48 shrink rounded-md py-2 text-sm font-semibold leading-6 shadow-lg ring-1 ring-zinc-900/5 dark:bg-zinc-800/90 shadow-zinc-800/5 bg-white/90 text-zinc-800 dark:text-zinc-200 dark:ring-white/10">
+          <div className="w-48 shrink rounded-md py-2 text-sm font-semibold leading-6 shadow-lg ring-1 ring-zinc-900/5 dark:bg-zinc-800 shadow-zinc-800/5 bg-white/90 text-zinc-800 dark:text-zinc-200 dark:ring-white/10">
             <span
               onClick={handleRelayMenuReadFromClick}
               className="mb-2 block cursor-pointer border-b border-zinc-200  px-4 pb-2 pt-1 dark:border-zinc-700/40"
