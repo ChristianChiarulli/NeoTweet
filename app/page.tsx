@@ -79,7 +79,7 @@ export default function Home() {
         setProfile(profile);
       };
 
-      const onEOSE = () => {};
+      const onEOSE = () => { };
 
       subscribe([relayUrl], userFilter, onEvent, onEOSE);
     };
@@ -111,17 +111,44 @@ export default function Home() {
         <div className="sticky top-10 space-y-10 lg:pl-16 xl:pl-24 lg:grid-area: sidebar">
           <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-              <span className="ml-3">Recommended</span>
+              <span className="ml-3 select-none">Recommended</span>
             </h2>
             <div className="ml-3 mt-6 space-y-6">
               <div className="flex flex-col items-start gap-y-4 text-zinc-800 dark:text-zinc-300">
-                <span>Test Article</span>
-                <span>Test Article</span>
-                <span>Test Article</span>
+                <span className="text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-teal-500 dark:hover:text-teal-400">
+                  NIP-04: Encrypted Direct Message
+                </span>
+                <span className="text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-teal-500 dark:hover:text-teal-400">
+                  Neovim Different Installation Methods Pros & Cons
+                </span>
+                <span className="text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-teal-500 dark:hover:text-teal-400">
+                  Garlic bread with cheese: What the science tells us
+                </span>
               </div>
             </div>
           </div>
         </div>
+
+        {/* <div className=""> */}
+        {/*   <div className="sticky top-10 space-y-10 lg:pl-16 xl:pl-24 lg:grid-area: sidebar"> */}
+        {/*     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"> */}
+        {/*       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"> */}
+        {/*         <span className="ml-3 select-none">Recommended</span> */}
+        {/*       </h2> */}
+        {/*       <div className="ml-3 mt-6 space-y-6"> */}
+        {/*         <div className="flex flex-col items-start gap-y-4 text-zinc-800 dark:text-zinc-300"> */}
+        {/*           <span className=" text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-teal-500 dark:hover:text-teal-400 "> */}
+        {/*             NIP-04: Encrypted Direct Message */}
+        {/*           </span> */}
+        {/*           <span>Neovim Different Installation Methods Pros & Cons</span> */}
+        {/*           <span> */}
+        {/*             Garlic bread with cheese: What the science tells us */}
+        {/*           </span> */}
+        {/*         </div> */}
+        {/*       </div> */}
+        {/*     </div> */}
+        {/*   </div> */}
+        {/* </div> */}
       </div>
     </div>
   );
