@@ -10,6 +10,7 @@ import { getTagValues } from "./lib/utils";
 import RelayMenu from "./components/menus/RelayMenu";
 import { Profile } from "./types";
 import { useProfileStore } from "./stores/profileStore";
+import Link from "next/link";
 
 export default function Home() {
   const { articleEvents, getArticleEvents, setArticleEvents } =
@@ -116,13 +117,19 @@ export default function Home() {
             <div className="ml-3 mt-6 space-y-6">
               <div className="flex flex-col items-start gap-y-4 text-zinc-800 dark:text-zinc-300">
                 <span className="text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-teal-500 dark:hover:text-teal-400">
-                  NIP-04: Encrypted Direct Message
+                  <Link href="https://neotweet.com/naddr1qq4ku6tsxq6z6etwvde8jur5v4jz6erfwfjkxapdd4jhxumpvajj6wfnxu6njdenvgerzwfhqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygpzq53v9set80efqp4jwh3zfv596e9mr8mehk5sdxgmevuxrcvvkspsgqqqw4rscdrz4r">
+                    NIP-04: Encrypted Direct Message
+                  </Link>
                 </span>
                 <span className="text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-teal-500 dark:hover:text-teal-400">
-                  Neovim Different Installation Methods Pros & Cons
+                  <Link href="https://neotweet.com/naddr1qq7xuet0we5k6ttyd9nxvetjv4h8gttfdeehgctvd3shg6t0dckk6et5dphkguedwpex7uedvdhkuuedvfsnqdf5xcunycmpx56sz9rhwden5te0wfjkccte9ejxzmt4wvhxjmczyq3q2gkzcv4nhu5sq6e8tc3yk2zavja3naumm2gxnydukwrpuxxtgqcyqqq823cv73txj">
+                    Neovim Different Installation Methods Pros & Cons
+                  </Link>
                 </span>
                 <span className="text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-teal-500 dark:hover:text-teal-400">
-                  Garlic bread with cheese: What the science tells us
+                  <Link href="https://neotweet.com/naddr1qqlkwctjd35kxttzwfjkzepdwa5hg6pdvd5x2etnv5khw6rpwskhg6r994ekx6t9de3k2tt5v4kxcuedw4ej6wp4xqunqdt9xqurvdfjqy28wumn8ghj7un9d3shjtnyv9kh2uewd9hsygpzq53v9set80efqp4jwh3zfv596e9mr8mehk5sdxgmevuxrcvvkspsgqqqw4rs6x84xd">
+                    Garlic bread with cheese: What the science tells us
+                  </Link>
                 </span>
               </div>
             </div>
