@@ -10,8 +10,10 @@ import { EventProfileContent, Profile } from "../../types";
 import UserMenu from "../menus/UserMenu";
 
 export default function UserProfile() {
-  const { subscribe, activeRelay, connect, relayUrl, setRelayUrl } = useRelayStore();
-  const { getUserPublicKey, getUserProfile, setUserProfile, setUserEvent } = useUserProfileStore();
+  const { subscribe, activeRelay, connect, relayUrl, setRelayUrl } =
+    useRelayStore();
+  const { getUserPublicKey, getUserProfile, setUserProfile, setUserEvent } =
+    useUserProfileStore();
   const [currentProfile, setCurrentProfile] = useState<Profile>();
 
   useEffect(() => {
@@ -75,7 +77,13 @@ export default function UserProfile() {
   return (
     <>
       <UserMenu>
-        {currentProfile && <img className="mt-2 inline-block h-10 w-10 rounded-full" src={currentProfile.picture} alt="" />}
+        {currentProfile && (
+          <img
+            className="mt-1.5 inline-block h-10 w-10 rounded-full shadow-lg backdrop-blur shadow-zinc-800/10 ring-1 ring-zinc-900/10 dark:ring-white/10"
+            src={currentProfile.picture}
+            alt=""
+          />
+        )}
       </UserMenu>
     </>
   );
