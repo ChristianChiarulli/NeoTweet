@@ -30,11 +30,11 @@ export default function ThemeToggle({ theme }: Props) {
         onClick={toggleTheme}
       >
         {_theme === Theme.light ? (
-          <div className="cursor-pointer hover:bg-zinc-200 p-2 rounded-full">
+          <div className="cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/90 p-2 rounded-full shadow-lg backdrop-blur shadow-zinc-800/5 ring-1 ring-zinc-900/10 dark:ring-white/10">
             <SunIcon className="h-6 w-6 stroke-teal-400" />
           </div>
         ) : (
-          <div className="cursor-pointer hover:bg-zinc-800 p-2 rounded-full">
+          <div className="cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/90 p-2 rounded-full shadow-lg backdrop-blur shadow-zinc-800/5 ring-1 ring-zinc-900/10 dark:ring-white/10">
             <MoonIcon className="h-6 w-6 stroke-purple-500" />
           </div>
         )}

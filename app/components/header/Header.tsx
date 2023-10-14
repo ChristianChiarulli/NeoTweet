@@ -18,7 +18,7 @@ export default function Header() {
         <div className="mx-auto max-w-2xl lg:max-w-5xl">
           <div className="relative flex gap-4 items-center">
             <div className="flex flex-1">
-              <span className="text-2xl text-zinc-500 dark:text-zinc-200">
+              <span className="text-3xl text-zinc-500 dark:text-zinc-200">
                 <Link
                   className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
                   href="/"
@@ -78,8 +78,8 @@ export default function Header() {
               {/*   <PencilSquareIcon className="flex items-center h-4 w-4 ml-1 -mr-1 text-teal-50" /> */}
               {/*   <span>write</span> */}
               {/* </button> */}
-              <div className="cursor-pointer hover:bg-zinc-200 dark:hover:bg-zinc-800 p-2 rounded-full shadow-zinc-800">
-                <MagnifyingGlassIcon className="h-6 w-6 stroke-zinc-600 dark:stroke-zinc-500" />
+              <div className="cursor-pointer hover:bg-zinc-50 dark:hover:bg-zinc-800/90 p-2 rounded-full shadow-lg backdrop-blur shadow-zinc-800/5 ring-1 ring-zinc-900/10 dark:ring-white/10">
+                <MagnifyingGlassIcon className="h-6 w-6 stroke-zinc-500 dark:stroke-zinc-500" />
               </div>
               <ThemeToggle theme={theme} />
               <Login>
