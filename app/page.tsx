@@ -28,7 +28,7 @@ export default function Home() {
     kinds: [30023],
     limit: 10,
     until: undefined,
-    "#t": ["neovim"],
+    // "#t": ["neovim"],
   };
 
   const getArticles = async () => {
@@ -108,7 +108,7 @@ export default function Home() {
 
       <RelayMenu />
       {/* Sidebar */}
-      <div className="">
+      <div className="hidden lg:block">
         <div className="sticky top-10 space-y-10 lg:pl-16 xl:pl-24 lg:grid-area: sidebar">
           <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
             <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -134,28 +134,35 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* <div className=""> */}
-        {/*   <div className="sticky top-10 space-y-10 lg:pl-16 xl:pl-24 lg:grid-area: sidebar"> */}
-        {/*     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"> */}
-        {/*       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100"> */}
-        {/*         <span className="ml-3 select-none">Recommended</span> */}
-        {/*       </h2> */}
-        {/*       <div className="ml-3 mt-6 space-y-6"> */}
-        {/*         <div className="flex flex-col items-start gap-y-4 text-zinc-800 dark:text-zinc-300"> */}
-        {/*           <span className=" text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-teal-500 dark:hover:text-teal-400 "> */}
-        {/*             NIP-04: Encrypted Direct Message */}
-        {/*           </span> */}
-        {/*           <span>Neovim Different Installation Methods Pros & Cons</span> */}
-        {/*           <span> */}
-        {/*             Garlic bread with cheese: What the science tells us */}
-        {/*           </span> */}
-        {/*         </div> */}
-        {/*       </div> */}
-        {/*     </div> */}
-        {/*   </div> */}
-        {/* </div> */}
+          <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+            <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              <span className="ml-3 select-none">Tags</span>
+            </h2>
+            <div className="ml-3 mt-6 space-y-6">
+              <div className="flex items-start gap-y-4 gap-x-4 flex-wrap text-zinc-800 dark:text-zinc-300">
+                <span className="cursor-pointer inline-flex items-center dark:bg-gray-400/10 rounded-2xl dark:text-gray-400 dark:ring-gray-400/20 bg-gray-50 px-3 py-2 text-sm text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  neovim
+                </span>
+                <span className="cursor-pointer inline-flex items-center dark:bg-gray-400/10 rounded-2xl dark:text-gray-400 dark:ring-gray-400/20 bg-gray-50 px-3 py-2 text-sm text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  lazy
+                </span>
+                <span className="cursor-pointer inline-flex items-center dark:bg-gray-400/10 rounded-2xl dark:text-gray-400 dark:ring-gray-400/20 bg-gray-50 px-3 py-2 text-sm text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  telescope
+                </span>
+                <span className="cursor-pointer inline-flex items-center dark:bg-gray-400/10 rounded-2xl dark:text-gray-400 dark:ring-gray-400/20 bg-gray-50 px-3 py-2 text-sm text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  lua
+                </span>
+                <span className="cursor-pointer inline-flex items-center dark:bg-gray-400/10 rounded-2xl dark:text-gray-400 dark:ring-gray-400/20 bg-gray-50 px-3 py-2 text-sm text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  vimscript
+                </span>
+                <span className="cursor-pointer inline-flex items-center dark:bg-gray-400/10 rounded-2xl dark:text-gray-400 dark:ring-gray-400/20 bg-gray-50 px-3 py-2 text-sm text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                  plugin
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
