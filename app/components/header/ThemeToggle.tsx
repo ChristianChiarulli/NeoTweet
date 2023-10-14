@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-
 import { Theme } from "../../types";
 
 interface Props {

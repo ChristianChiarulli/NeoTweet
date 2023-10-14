@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import { usePostRelayStore } from "@/app/stores/postRelayStore";
 import { useRelayInfoStore } from "@/app/stores/relayInfoStore";
 
